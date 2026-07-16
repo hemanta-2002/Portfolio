@@ -5,8 +5,14 @@ import Artwork from './Artwork'
 export default function Portfolio() {
   const [active, setActive] = useState('All')
 
+  // Limit portfolio to these categories only
+  const allowed = ['UI/UX', 'Graphic']
+  const localFilters = ['All', ...allowed]
+
   const visible =
-    active === 'All' ? projects : projects.filter((p) => p.category === active)
+    active === 'All'
+      ? projects.filter((p) => allowed.includes(p.category))
+      : projects.filter((p) => p.category === active)
 
   return (
     <section id="work" className="portfolio">
@@ -17,7 +23,7 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio__filters">
-          {filters.map((f) => (
+          {localFilters.map((f) => (
             <button
               key={f}
               className={`chip ${active === f ? 'chip--active' : ''}`}

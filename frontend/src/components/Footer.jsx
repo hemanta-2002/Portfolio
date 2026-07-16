@@ -1,7 +1,7 @@
 import { profile } from '../data/content'
 
 const links = ['Home', 'About', 'Services', 'Work', 'Process', 'Contact']
-const socials = ['Be', 'Dr', 'in']
+const socials = ['Be', 'in']
 
 export default function Footer() {
   return (

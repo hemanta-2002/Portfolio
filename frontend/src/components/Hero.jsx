@@ -1,7 +1,7 @@
 import { profile } from '../data/content'
 import Artwork from './Artwork'
 
-const socials = ['Be', 'Dr', 'in', 'Ig', '@']
+const socials = ['Be', 'in']
 
 export default function Hero() {
   return (
