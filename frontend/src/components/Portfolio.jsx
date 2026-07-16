@@ -92,8 +92,11 @@ export default function Portfolio() {
         }
         .portfolio__grid {
           display: grid;
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
           gap: 28px;
+          justify-content: center;
+          max-width: 1200px;
+          margin: 0 auto;
         }
         .project {
           display: block;
