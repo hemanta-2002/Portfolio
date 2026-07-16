@@ -19,16 +19,42 @@ export default function Hero() {
             <a href="#work" className="btn btn-primary">
               View My Work
             </a>
-            <a href="#contact" className="btn btn-outline">
+            <a
+              href="/Hemanta%20Thapa%20CV.pdf"
+              download="Hemanta Thapa CV.pdf"
+              className="btn btn-outline"
+            >
               ↓ Download CV
             </a>
           </div>
           <div className="hero__socials">
-            {socials.map((s) => (
-              <span key={s} className="hero__social">
-                {s}
-              </span>
-            ))}
+            {socials.map((s) =>
+              s === 'Be' ? (
+                <a
+                  key={s}
+                  href="https://www.behance.net/150fbc96"
+                  className="hero__social"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {s}
+                </a>
+              ) : s === 'in' ? (
+                <a
+                  key={s}
+                  href="https://www.linkedin.com/in/hemanta-thapa-316b52238/"
+                  className="hero__social"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {s}
+                </a>
+              ) : (
+                <span key={s} className="hero__social">
+                  {s}
+                </span>
+              )
+            )}
           </div>
         </div>
 

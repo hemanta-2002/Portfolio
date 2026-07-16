@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap footer__inner">
         <a href="#home" className="footer__brand">
-          <span className="nav__mark">AR</span>
+          <span className="nav__mark">HT</span>
           {profile.name}
         </a>
 
@@ -24,11 +24,33 @@ export default function Footer() {
 
         <div className="footer__right">
           <div className="footer__socials">
-            {socials.map((s) => (
-              <span key={s} className="hero__social">
-                {s}
-              </span>
-            ))}
+            {socials.map((s) =>
+              s === 'Be' ? (
+                <a
+                  key={s}
+                  href="https://www.behance.net/150fbc96"
+                  className="hero__social"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {s}
+                </a>
+              ) : s === 'in' ? (
+                <a
+                  key={s}
+                  href="https://www.linkedin.com/in/hemanta-thapa-316b52238/"
+                  className="hero__social"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  {s}
+                </a>
+              ) : (
+                <span key={s} className="hero__social">
+                  {s}
+                </span>
+              )
+            )}
           </div>
           <a href="#home" className="footer__top" aria-label="Back to top">
             ↑

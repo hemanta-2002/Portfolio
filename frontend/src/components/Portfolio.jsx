@@ -36,13 +36,25 @@ export default function Portfolio() {
 
         <div className="portfolio__grid">
           {visible.map((p) => (
-            <article key={p.id} className="project">
-              <div className="project__art">
-                <Artwork variant="project" color={p.color} label={p.category} />
-              </div>
+            <a
+              key={p.id}
+              className="project"
+              href={p.href || '#'}
+              target={p.href && p.href !== '#' ? '_blank' : undefined}
+              rel={p.href && p.href !== '#' ? 'noreferrer noopener' : undefined}
+            >
+              {p.img ? (
+                <div className="project__img">
+                  <img src={encodeURI(p.img)} alt={p.title} />
+                </div>
+              ) : (
+                <div className="project__art">
+                  <Artwork variant="project" color={p.color} label={p.category} />
+                </div>
+              )}
               <h3>{p.title}</h3>
               <p>{p.category} Design</p>
-            </article>
+            </a>
           ))}
         </div>
 
@@ -83,7 +95,25 @@ export default function Portfolio() {
           grid-template-columns: repeat(4, 1fr);
           gap: 28px;
         }
-        .project__art { border-radius: var(--radius); overflow: hidden; }
+        .project {
+          display: block;
+          padding: 24px;
+          border-radius: var(--radius);
+          background: var(--card);
+          transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+          border: 1px solid transparent;
+          color: inherit;
+          text-decoration: none;
+        }
+        .project:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 24px 50px rgba(22, 18, 43, 0.08);
+          border-color: rgba(100, 80, 255, 0.18);
+        }
+        .project:hover h3 { color: var(--ink); }
+        .project:hover p { color: var(--ink-soft); }
+        .project__art, .project__img { border-radius: var(--radius); overflow: hidden; }
+        .project__img img { display: block; width: 100%; height: 220px; object-fit: cover; }
         .project h3 { margin-top: 16px; font-size: 16px; }
         .project p { margin: 4px 0 0; font-size: 13.5px; color: var(--ink-soft); font-family: var(--font-mono); }
         @media (max-width: 1000px) {

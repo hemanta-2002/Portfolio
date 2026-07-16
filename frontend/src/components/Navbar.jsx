@@ -24,7 +24,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="wrap nav__inner">
         <a href="#home" className="nav__brand">
-          <span className="nav__mark">AR</span>
+          <span className="nav__mark">HT</span>
           {profile.name}
           <span className="nav__dot">.</span>
         </a>

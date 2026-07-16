@@ -4,7 +4,6 @@ export const profile = {
   location: 'Tilottama- 06, Rupandehi, Nepal',
   address: 'Tilottama- 06, Rupandehi, Nepal',
   email: 'hemantathapa973@gmail.com',
-  phone: '+977 98XXXXXXXX',
   availability: 'Freelance / Open to work',
   years: '2+',
 }
@@ -39,14 +38,30 @@ export const services = [
 export const filters = ['All', 'UI/UX', 'Graphic', 'Branding', 'Social']
 
 export const projects = [
-  { id: 1, title: 'Nimbus Banking App', category: 'UI/UX', color: 'violet' },
-  { id: 2, title: 'Terra Coffee Co.', category: 'Graphic', color: 'coral' },
-  { id: 3, title: 'Rivera Studio Identity', category: 'Branding', color: 'yellow' },
-  { id: 4, title: 'Pulse Fitness Campaign', category: 'Social', color: 'teal' },
-  { id: 5, title: 'Wanderlist Travel App', category: 'UI/UX', color: 'coral' },
-  { id: 6, title: 'Folio Editorial Layout', category: 'Graphic', color: 'violet' },
-  { id: 7, title: 'Marlow & Co. Rebrand', category: 'Branding', color: 'teal' },
-  { id: 8, title: 'Glow Skincare Reel Kit', category: 'Social', color: 'yellow' },
+  {
+    id: 1,
+    title: 'Creative Digital Agency Website UI',
+    category: 'UI/UX',
+    color: 'coral',
+    href: 'https://www.behance.net/gallery/252799341/Creative-Digital-Agency-Website-UI',
+    img: '/Home (3).png',
+  },
+  {
+    id: 2,
+    title: 'Reyansh Infosys – Corporate Website UI',
+    category: 'UI/UX',
+    color: 'violet',
+    href: 'https://www.behance.net/gallery/252798189/Reyansh-Infosys-Corporate-Website-UI',
+    img: '/Frame 65.png',
+  },
+  {
+    id: 3,
+    title: 'Social Media Design for Nepsay Mart',
+    category: 'Graphic',
+    color: 'teal',
+    href: 'https://www.behance.net/gallery/252798553/Social-Media-Design-for-Nepsay-Mart',
+    img: '/cover.jpg',
+  },
 ]
 
 export const process = [
